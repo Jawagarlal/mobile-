@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Bazaar | Premium Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mobile<span>Bazaar</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div style="background: #fff; padding: 10px; border-bottom: 2px solid #007bff; display: flex; justify-content: space-between; align-items: center;">
+    <h3>Shopping Cart (<span id="cart-count">0</span>)</h3>
+    <button onclick="toggleCart()" style="background: #28a745;">View Cart</button>
+</div>
+
+<div id="cart-modal" style="display:none; position: fixed; top: 50px; right: 20px; background: white; border: 1px solid #ccc; padding: 20px; width: 300px; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+    <h2>Your Cart</h2>
+    <ul id="cart-items" style="list-style: none; padding: 0;"></ul>
+    <hr>
+    <p><strong>Total: $<span id="cart-total">0</span></strong></p>
+    <button onclick="clearCart()" style="background: #dc3545;">Clear Cart</button>
+    <button onclick="toggleCart()">Close</button>
+</div>
+
+    <header class="hero">
+        <h1>Latest Tech, Lowest Prices.</h1>
+        <p>Upgrade your lifestyle with the newest smartphones.</p>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Featured Devices</h2>
+        <div class="product-grid" id="product-display">
+            </div>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
